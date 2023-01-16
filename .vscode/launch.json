@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Client",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:8080",
+			"sourceMaps": true
+		},
+		{
+			"name": "Server",
+			"type": "node",
+			"request": "launch",
+			"program": "./dist/server/index.js",
+			"outFiles": ["${workspaceFolder}/dist/server/**/*.js"],
+			"sourceMaps": true
+		}
+	]
+}
