@@ -1,29 +1,30 @@
+import "bulma/css/bulma.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import * as ReactRouterDOM from "react-router-dom";
 import { New } from "./components/New.js";
-import { Card } from "./components/Card.js";
+import { Container } from "./components/Container.js";
 import { View } from "./components/View.js";
 import { Sign } from "./components/Sign.js";
 
-const rootElement = document.getElementById("root") as HTMLDivElement;
+const rootElement = document.body;
 const root = ReactDOM.createRoot(rootElement);
 const router = ReactRouterDOM.createBrowserRouter([
 	{
-		element: <New />,
-		path: "/"
-	},
-	{
-		element: <Card />,
-		path: "cards/:cardId",
+		element: <Container />,
+		path: "/",
 		children: [
 			{
-				element: <View />,
+				element: <New />,
 				index: true
 			},
 			{
+				element: <View />,
+				path: "cards/:cardId"
+			},
+			{
 				element: <Sign />,
-				path: "sign"
+				path: "cards/:cardId/sign"
 			}
 		]
 	}

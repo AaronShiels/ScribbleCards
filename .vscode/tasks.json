@@ -22,6 +22,18 @@
 			"problemMatcher": ["$tsc"]
 		},
 		{
+			"label": "npm: styles: build: debug",
+			"type": "npm",
+			"script": "styles: build: debug",
+			"problemMatcher": ["$tsc"]
+		},
+		{
+			"label": "npm: styles: build: release",
+			"type": "npm",
+			"script": "styles: build: release",
+			"problemMatcher": ["$tsc"]
+		},
+		{
 			"label": "npm: server: build: debug",
 			"type": "npm",
 			"script": "server: build: debug",
